@@ -5,11 +5,53 @@ import threading
 import requests
 from colorama import init, Fore
 
-# Initialize Colorama for colored output
+# Inisialisasi colorama
 init(autoreset=True)
 
-# Set the window title
-print(f"\033]0;Python DDOS V1.0 By elitestresser.club\007", end="", flush=True)
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+# ============================
+#   Typing Animation
+# ============================
+def typewriter(text, delay=0.002):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()  # newline
+
+# ============================
+#   Banner ASCII
+# ============================
+def display_header():
+    header_lines = [
+        Fore.GREEN + "══════════════════════════════════════════════════════════════════════════",     
+        Fore.YELLOW + " ██████▒▒   ██▒▒                 ██████▒▒ ██▒▒   ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒  ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒ ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒        " + Fore.RED + "█▒▒     " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒",
+        Fore.YELLOW + " █████▒▒    ██▒▒       " + Fore.RED + "███▒▒    " + Fore.YELLOW + "██▒▒      ██▒██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒      " + Fore.RED + "██▒██▒▒   " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒ ",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒     " + Fore.RED + "██▒▒ ██▒▒  " + Fore.YELLOW + "██▒▒      ██▒▒ ██▒▒",
+        Fore.YELLOW + " ██████▒▒   ██████▒▒" + Fore.RED + "██▒▒   ██▒▒  " + Fore.YELLOW + "██████▒▒ ██▒▒   ██▒▒",
+        Fore.RED + "                   ██▒▒     ██▒▒    " + Fore.GREEN + "███████▒▒  ████▒▒     ████▒██▒▒       ██▒▒",
+        Fore.RED + "                  ████████▒▒ ██▒▒   " + Fore.GREEN + "██▒▒   ██▒▒██▒██▒▒   ██▒██▒▒██▒▒     ██▒▒",
+        Fore.RED + "                 ██▒▒         ██▒▒  " + Fore.GREEN + "██▒▒   ██▒▒██▒▒██▒▒ ██▒▒██▒▒ ██▒▒   ██▒▒",
+        Fore.RED + "                ██▒▒           ██▒▒ " + Fore.GREEN + "██▒▒   ██▒▒██▒▒ ██▒██▒▒ ██▒▒  ██▒▒ ██▒▒",
+        Fore.RED + "               ██▒▒             ██▒▒" + Fore.GREEN + "██▒▒   ██▒▒██▒▒  ███▒▒  ██▒▒   ██▒██▒▒",
+        Fore.GREEN + "                                    ██████▒▒   ██▒▒   ██▒▒  ██▒▒    ███▒▒",
+        Fore.GREEN + "                                    ██▒▒ ██▒▒  ██▒▒         ██▒▒     ██▒▒",
+        Fore.GREEN + "                                    ██▒▒   ██▒▒██▒▒         ██▒▒     ██▒▒",
+        Fore.RED + "    █████▒▒  ███▒▒   ██▒▒   ██▒▒ █▒▒  █▒▒ ██▒▒ █▒▒ █▒▒███████▒▒ █▒▒   █▒▒",
+        Fore.RED + "   █▒▒      █▒▒  █▒▒ █▒█▒▒ █▒█▒▒ █▒▒  █▒▒ █▒█▒▒█▒▒ █▒▒   █▒▒     █▒▒ █▒▒",
+        Fore.WHITE + "   █▒▒      █▒▒  █▒▒ █▒▒█▒█▒▒█▒▒ █▒▒  █▒▒ █▒▒█▒█▒▒ █▒▒   █▒▒      ██▒▒",
+        Fore.WHITE + "    ████▒▒   ███▒▒   █▒▒██▒▒ █▒▒  ███▒▒   █▒▒ ██▒▒ █▒▒   █▒▒       █▒▒",
+        Fore.YELLOW + "════════════════════════════════════════════════════════════════════════════",     
+    ]
+    for line in header_lines:
+        print(line)
+        time.sleep(0.0015)  # typing effect
 
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
