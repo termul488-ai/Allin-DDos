@@ -9,7 +9,14 @@ from colorama import init, Fore
 # Initialize Colorama for colored output
 init(autoreset=True)
 
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
 
+os.system("clear")
+print("""
+########
+########
+""")
 
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
