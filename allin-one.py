@@ -11,19 +11,7 @@ init(autoreset=True)
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
-# ============================
-#   Typing Animation
-# ============================
-def typewriter(text, delay=0.002):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print()  # newline
 
-# ============================
-#   Banner ASCII
-# ============================
 def display_header():
     header_lines = [
         Fore.GREEN + "══════════════════════════════════════════════════════════════════════════",     
