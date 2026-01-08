@@ -3,7 +3,7 @@ import random
 import time
 import threading
 import requests
-from colorama import init, Fore
+from colorama import Fore, Style, init
 
 # Inisialisasi colorama
 init(autoreset=True)
@@ -11,6 +11,48 @@ init(autoreset=True)
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
+# ============================
+#   Typing Animation
+# ============================
+def typewriter(text, delay=0.002):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()  # newline
+
+# ============================
+#   Banner ASCII
+# ============================
+def display_header():
+    header_lines = [
+        Fore.GREEN + "══════════════════════════════════════════════════════════════════════════",     
+        Fore.YELLOW + " ██████▒▒   ██▒▒                 ██████▒▒ ██▒▒   ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒  ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒ ██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒        " + Fore.RED + "█▒▒     " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒",
+        Fore.YELLOW + " █████▒▒    ██▒▒       " + Fore.RED + "███▒▒    " + Fore.YELLOW + "██▒▒      ██▒██▒▒",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒      " + Fore.RED + "██▒██▒▒   " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒ ",
+        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒     " + Fore.RED + "██▒▒ ██▒▒  " + Fore.YELLOW + "██▒▒      ██▒▒ ██▒▒",
+        Fore.YELLOW + " ██████▒▒   ██████▒▒" + Fore.RED + "██▒▒   ██▒▒  " + Fore.YELLOW + "██████▒▒ ██▒▒   ██▒▒",
+        Fore.RED + "                   ██▒▒     ██▒▒    " + Fore.GREEN + "███████▒▒  ████▒▒     ████▒██▒▒       ██▒▒",
+        Fore.RED + "                  ████████▒▒ ██▒▒   " + Fore.GREEN + "██▒▒   ██▒▒██▒██▒▒   ██▒██▒▒██▒▒     ██▒▒",
+        Fore.RED + "                 ██▒▒         ██▒▒  " + Fore.GREEN + "██▒▒   ██▒▒██▒▒██▒▒ ██▒▒██▒▒ ██▒▒   ██▒▒",
+        Fore.RED + "                ██▒▒           ██▒▒ " + Fore.GREEN + "██▒▒   ██▒▒██▒▒ ██▒██▒▒ ██▒▒  ██▒▒ ██▒▒",
+        Fore.RED + "               ██▒▒             ██▒▒" + Fore.GREEN + "██▒▒   ██▒▒██▒▒  ███▒▒  ██▒▒   ██▒██▒▒",
+        Fore.GREEN + "                                    ██████▒▒   ██▒▒   ██▒▒  ██▒▒    ███▒▒",
+        Fore.GREEN + "                                    ██▒▒ ██▒▒  ██▒▒         ██▒▒     ██▒▒",
+        Fore.GREEN + "                                    ██▒▒   ██▒▒██▒▒         ██▒▒     ██▒▒",
+        Fore.RED + "    █████▒▒  ███▒▒   ██▒▒   ██▒▒ █▒▒  █▒▒ ██▒▒ █▒▒ █▒▒███████▒▒ █▒▒   █▒▒",
+        Fore.RED + "   █▒▒      █▒▒  █▒▒ █▒█▒▒ █▒█▒▒ █▒▒  █▒▒ █▒█▒▒█▒▒ █▒▒   █▒▒     █▒▒ █▒▒",
+        Fore.WHITE + "   █▒▒      █▒▒  █▒▒ █▒▒█▒█▒▒█▒▒ █▒▒  █▒▒ █▒▒█▒█▒▒ █▒▒   █▒▒      ██▒▒",
+        Fore.WHITE + "    ████▒▒   ███▒▒   █▒▒██▒▒ █▒▒  ███▒▒   █▒▒ ██▒▒ █▒▒   █▒▒       █▒▒",
+        Fore.YELLOW + "════════════════════════════════════════════════════════════════════════════",     
+    ]
+    for line in header_lines:
+        print(line)
+        time.sleep(0.0015)  # typing effect
+        
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -157,34 +199,10 @@ def validate_input(prompt, min_val, max_val, input_type=int):
             print(Fore.LIGHTRED_EX + "[!] Invalid input. Please enter a number.")
 
 def main():
-def display_header():
-    header_lines = [
-        Fore.GREEN + "══════════════════════════════════════════════════════════════════════════",     
-        Fore.YELLOW + " ██████▒▒   ██▒▒                 ██████▒▒ ██▒▒   ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒  ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒                ██▒▒      ██▒▒ ██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒        " + Fore.RED + "█▒▒     " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒",
-        Fore.YELLOW + " █████▒▒    ██▒▒       " + Fore.RED + "███▒▒    " + Fore.YELLOW + "██▒▒      ██▒██▒▒",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒      " + Fore.RED + "██▒██▒▒   " + Fore.YELLOW + "██▒▒      ██▒▒██▒▒ ",
-        Fore.YELLOW + " ██▒▒   ██▒▒██▒▒     " + Fore.RED + "██▒▒ ██▒▒  " + Fore.YELLOW + "██▒▒      ██▒▒ ██▒▒",
-        Fore.YELLOW + " ██████▒▒   ██████▒▒" + Fore.RED + "██▒▒   ██▒▒  " + Fore.YELLOW + "██████▒▒ ██▒▒   ██▒▒",
-        Fore.RED + "                   ██▒▒     ██▒▒    " + Fore.GREEN + "███████▒▒  ████▒▒     ████▒██▒▒       ██▒▒",
-        Fore.RED + "                  ████████▒▒ ██▒▒   " + Fore.GREEN + "██▒▒   ██▒▒██▒██▒▒   ██▒██▒▒██▒▒     ██▒▒",
-        Fore.RED + "                 ██▒▒         ██▒▒  " + Fore.GREEN + "██▒▒   ██▒▒██▒▒██▒▒ ██▒▒██▒▒ ██▒▒   ██▒▒",
-        Fore.RED + "                ██▒▒           ██▒▒ " + Fore.GREEN + "██▒▒   ██▒▒██▒▒ ██▒██▒▒ ██▒▒  ██▒▒ ██▒▒",
-        Fore.RED + "               ██▒▒             ██▒▒" + Fore.GREEN + "██▒▒   ██▒▒██▒▒  ███▒▒  ██▒▒   ██▒██▒▒",
-        Fore.GREEN + "                                    ██████▒▒   ██▒▒   ██▒▒  ██▒▒    ███▒▒",
-        Fore.GREEN + "                                    ██▒▒ ██▒▒  ██▒▒         ██▒▒     ██▒▒",
-        Fore.GREEN + "                                    ██▒▒   ██▒▒██▒▒         ██▒▒     ██▒▒",
-        Fore.RED + "    █████▒▒  ███▒▒   ██▒▒   ██▒▒ █▒▒  █▒▒ ██▒▒ █▒▒ █▒▒███████▒▒ █▒▒   █▒▒",
-        Fore.RED + "   █▒▒      █▒▒  █▒▒ █▒█▒▒ █▒█▒▒ █▒▒  █▒▒ █▒█▒▒█▒▒ █▒▒   █▒▒     █▒▒ █▒▒",
-        Fore.WHITE + "   █▒▒      █▒▒  █▒▒ █▒▒█▒█▒▒█▒▒ █▒▒  █▒▒ █▒▒█▒█▒▒ █▒▒   █▒▒      ██▒▒",
-        Fore.WHITE + "    ████▒▒   ███▒▒   █▒▒██▒▒ █▒▒  ███▒▒   █▒▒ ██▒▒ █▒▒   █▒▒       █▒▒",
-        Fore.YELLOW + "════════════════════════════════════════════════════════════════════════════",     
-    ]
-    for line in header_lines:
-        print(line)
-        time.sleep(0.0015)  # typing effect
+    # ============================
+    #   Menu Utama
+    # ============================
+
     # Print header when tool runs
     print(Fore.LIGHTGREEN_EX + "Made by elitestresser.club")
     print(Fore.LIGHTBLUE_EX + "=== Network Flood Tool ===")
