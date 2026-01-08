@@ -1,3 +1,4 @@
+import os
 import socket
 import random
 import time
@@ -8,8 +9,7 @@ from colorama import init, Fore
 # Initialize Colorama for colored output
 init(autoreset=True)
 
-# Set the window title
-print(f"\033]0;Python DDOS V1.0 By elitestresser.club\007", end="", flush=True)
+
 
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
