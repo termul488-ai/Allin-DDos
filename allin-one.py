@@ -216,8 +216,8 @@ def main():
 
     if protocol == "1":  # UDP
         print("\033[48;5;3mUDP METODS:\033[0m")
-        print("\033[32m UDP Plain press 1")
-        print("\033[32m UDP Random press 2")
+        print("\033[32m┏━━━> UDP Plain press 1")
+        print("\033[32m┗━━━> UDP Random press 2")
         method = input("\033[7m Select method (1-2):\033[0m\033[32m \033[0m").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
