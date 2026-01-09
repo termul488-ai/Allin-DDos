@@ -12,7 +12,8 @@ init(autoreset=True)
 
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
-
+    
+attemps = 0
 os.system("clear")
 logo = """
 
@@ -26,6 +27,17 @@ logo = """
 """
 faded_text = fade.fire(logo)
 print(faded_text)
+while attemps < 100:
+    username = input("\033[32mEnter your username: \033[0m")
+    password = input("\033[32mEnter your password: \033[0m")
+
+    if username == 'ba313' and password == 'ba313':
+        print("\033[32m⟩⟩ R U A N G  P E J U A N G \033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
