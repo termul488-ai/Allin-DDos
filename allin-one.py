@@ -194,9 +194,9 @@ def main():
     print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 30} \033[0m{Fore.LIGHTRED_EX}║")
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
 
-    while attemps < 100:
-        username = input("\033[32mEnter your username: \033[0m")
-        password = input("\033[32mEnter your password: \033[0m")
+while attemps < 100:
+    username = input("\033[32mEnter your username: \033[0m")
+    password = input("\033[32mEnter your password: \033[0m")
 
     if username == 'ba313' and password == 'ba313':
         print("\033[48;5;3m•••⟩⟩ R U A N G  P E J U A N G \033[0m")
@@ -205,6 +205,7 @@ def main():
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
         attemps += 1
         continue
+
     print("Protocols:")
     print("1. UDP")
     print("2. TCP")
