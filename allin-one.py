@@ -170,8 +170,11 @@ def validate_input(prompt, min_val, max_val, input_type=int):
 
 def main():
     # Print header when tool runs
-    print(Fore.LIGHTGREEN_EX + "Made by elitestresser.club")
-    print(Fore.LIGHTBLUE_EX + "=== Network Flood Tool ===")
+    print(f"{Fore.WHITE}{Style.BRIGHT}{' ' * 57}v.1.0")
+    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}https://kunkaffa@gmail.com")
+    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}
+    print(f"{Fore.CYAN}|{'=' * 74}|")
+    
     print("Protocols:")
     print("1. UDP")
     print("2. TCP")
