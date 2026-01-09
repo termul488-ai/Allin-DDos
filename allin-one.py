@@ -252,8 +252,8 @@ def main():
             print(Fore.LIGHTRED_EX + "[!] Invalid TCP method.")
 
     elif protocol == "3":  # HTTP
-        url = input(Fore.LIGHTBLUE_EX + "Enter URL (e.g., http://example.com): ")
-        duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
+        url = input(Fore.LIGHTBLUE_EX + "Enter URL (http://example.com): ")
+        duration = validate_input("Enter flood duration in seconds: ", 60, float('inf'), float)
         http_flood(url, duration)
 
     else:
