@@ -212,13 +212,13 @@ def main():
     print("\033[32m┗━> TCP press 2")
     print("\033[32m┗━> HTTP press 3")
     
-    protocol = input("\"\033[48;5;3mSELECT PROTOKOL (1-3):\033[0m\033[32m \033[0m").strip()
+    protocol = input("\033[48;5;3mSELECT PROTOKOL (1-3):\033[0m\033[32m \033[0m").strip()
 
     if protocol == "1":  # UDP
-        print(Fore.LIGHTBLUE_EX + "\nUDP Methods:")
-        print("1. UDP Plain (Fixed payload)")
-        print("2. UDP Random (Random payload)")
-        method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
+        print("\033[48;5;3mUDP METODS:\033[0m")
+        print("\033[32m UDP Plain press 1")
+        print("\033[32m UDP Random press 2")
+        method = input("\033[7m Select method (1-2):\033[0m\033[32m \033[0m").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
         port = validate_input("Enter port (80/443): ", 1, 65535)
