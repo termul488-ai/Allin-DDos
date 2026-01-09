@@ -219,11 +219,11 @@ def main():
         print("\033[32m┏━━━> UDP Plain press 1")
         print("\033[32m┗━━━> UDP Random press 2")
         method = input("\033[7m Select method (1-2):\033[0m\033[32m \033[0m").strip()
-        print(Fore.LIGHTCYAN_EX + "┏━━━━━━━━⬣")
+        print(Fore.LIGHTCYAN_EX + "┏━━━━━━━━━━━⬣")
         ip = input(Fore.LIGHTCYAN_EX + "┗━>IP Server: ")
-        port = validate_input("┗━>Port (80): ", 1, 65535)
-        duration = validate_input("┗━> Flood duration in seconds: ", 1, float('inf'), float)
-        packet_size = validate_input("┗━> Enter packet size in bytes (1-65500): ", 1, 65500)
+        port = validate_input("Fore.LIGHTCYAN_EX┗━>Port (80): ", 1, 65535)
+        duration = validate_input("Fore.LIGHTCYAN_EX┗━> Flood duration in seconds: ", 1, float('inf'), float)
+        packet_size = validate_input("Fore.LIGHTCYAN_EX┗━> Enter packet size in bytes (1-65500): ", 1, 65500)
         
         if method == "1":
             udp_plain_flood(ip, port, duration, packet_size)
