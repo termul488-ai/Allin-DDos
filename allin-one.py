@@ -222,9 +222,9 @@ def main():
 
         print("\033[32m┏━━━━━━━⬣")
         ip = input("\033[32m┗> IP Server: ")
-        port = validate_input("\033[32m┗> port (80/443):") , 1, 65535))
-        duration = validate_input("\033[32m┗> flood duration in seconds:") , 1, float('inf'), float))
-        packet_size = validate_input("\033[32m┗> packet size in bytes (1-65500):") , 1, 65500))
+        port = validate_input("\033[32m┗> port (80/443): " , 1, 65535))
+        duration = validate_input("\033[32m┗> flood duration in seconds: " , 1, float('inf'), float))
+        packet_size = validate_input("\033[32m┗> packet size in bytes (1-65500): " , 1, 65500))
 
         if method == "1":
             udp_plain_flood(ip, port, duration, packet_size)
