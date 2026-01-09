@@ -195,7 +195,7 @@ def main():
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
 
     while attemps < 100:
-        print("\033[32m┏━━━━━━━⬣\033[0m")
+    print("\033[32m┏━━━━━━━⬣\033[0m")
         username = input("\033[32m┗━> Enter your username: \033[0m")
         password = input("\033[32m┗━> Enter your password: \033[0m")
 
