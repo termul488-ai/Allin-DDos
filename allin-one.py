@@ -219,7 +219,7 @@ def main():
         print("\033[32m┏━━━> UDP Plain press 1")
         print("\033[32m┗━━━> UDP Random press 2")
         method = input("\033[7m Select method (1-2):\033[0m\033[32m \033[0m").strip()
-
+        print(Fore.LIGHTCYAN_EX + "┏━━━━━━━━⬣")
         ip = input(Fore.LIGHTCYAN_EX + "┗━>IP Server: ")
         port = validate_input("┗━>Port (80): ", 1, 65535)
         duration = validate_input("┗━> Flood duration in seconds: ", 1, float('inf'), float)
