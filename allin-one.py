@@ -4,6 +4,7 @@ import random
 import time
 import threading
 import requests
+import fade
 from colorama import init, Fore
 
 # Initialize Colorama for colored output
@@ -13,10 +14,12 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 os.system("clear")
-print("""
+logo = """
 ########
 ########
-""")
+"""
+faded_text = fade.fire(logo)
+print(faded_text)
 
 # UDP Flood Methods
 def udp_plain_flood(ip, port, duration, packet_size):
