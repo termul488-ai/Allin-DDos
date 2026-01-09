@@ -170,9 +170,9 @@ def validate_input(prompt, min_val, max_val, input_type=int):
 
 def main():
     # Print header when tool runs
-    print(f"{Fore.LIGHTRED_EX}{Style.BRIGHT}╔{' l═' * 57}v.1.0{Fore.LIGHTRED_EX}╗")
-    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}https://kunkaffa@gmail.com")
-    print(f"{Fore.CYAN}{Style.BRIGHT}{' ' * 16}")
+    print(f"{Fore.LIGHTRED_EX}{Style.BRIGHT}╔{' l═' * 57}╗")
+    print(f"{Fore.CYAN}{Style.BRIGHT}║  v2.0{' ' * 16}║")
+    print(f"{Fore.CYAN}{Style.BRIGHT}║  Black Army Cyber grupe{' ' * 16}║")
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 74}╝")
     
     print("Protocols:")
