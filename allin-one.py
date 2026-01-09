@@ -212,7 +212,7 @@ def main():
     print("\033[32m┗━> TCP")
     print("\033[32m┗━> HTTP")
     
-    protocol = input("\"\033[48;5;3mSelect protocol (1-3)\033[0m:\033[32m  \033[0m").strip()
+    protocol = input("\"\033[48;5;3mSELECT PROTOKOL (1-3):\033[0m\033[32m \033[0m").strip()
 
     if protocol == "1":  # UDP
         print(Fore.LIGHTBLUE_EX + "\nUDP Methods:")
