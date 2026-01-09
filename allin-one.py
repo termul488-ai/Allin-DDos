@@ -253,7 +253,7 @@ def main():
 
     elif protocol == "3":  # HTTP
         url = input(Fore.LIGHTBLUE_EX + "Enter URL (http://example.com): ")
-        duration = validate_input("Enter flood duration in seconds: ", 60, float('inf'), float)
+        duration = validate_input("Enter flood duration in seconds: ", 1, str(url), float)
         http_flood(url, duration)
 
     else:
