@@ -18,10 +18,10 @@ logo = """
 
 ██╗ ████╗    ██╗       ██████╗  ████╗   ██╗ ███████╗
 ██║ ██ ██║   ██║      ██╔═══██║ ██ ██║  ██║ ██╔════╝
-██║ ██║ ██║  ██║  ██╗ ██║   ██║ ██║██║  ██║██║
-██║ ██║  ██║ ██║  ██║ ██║   ██║ ██║ ██  ██║ ███████╗
-██║ ██║   ██ ██║      ██║   ██║ ██║  ██ ██║ ██╔════╝
-██║ ██║    ████║       ██████╔╝ ██║   ████║ ███████╗
+██║ ██║ ██║  ██║  ██╗ ██║   ██║ ██║ ██║ ██║██║
+██║ ██║  ██║ ██║  ██║ ██║   ██║ ██║  ██  ██║ ███████╗
+██║ ██║   ██ ██║      ██║   ██║ ██║   ██ ██║ ██╔════╝
+██║ ██║    ████║       ██████╔╝ ██║    ████║ ███████╗
 ╚═╝ ╚═╝    ╚═══╝       ╚═════╝  ╚═╝   ╚═══╝ ╚══════╝
 """
 faded_text = fade.fire(logo)
@@ -180,8 +180,8 @@ def validate_input(prompt, min_val, max_val, input_type=int):
 def main():
     # Print header when tool runs
     print(f"{Fore.LIGHTRED_EX}╔{'═' * 55}╗")
-    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 16}║\033[0m")
-    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 16}║\033[0m")
+    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 49}║\033[0m")
+    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 22}║\033[0m")
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
     
     print("Protocols:")
