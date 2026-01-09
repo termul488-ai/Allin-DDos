@@ -13,7 +13,7 @@ init(autoreset=True)
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
     
-attemps = 0
+
 os.system("clear")
 logo = """
 
@@ -188,6 +188,7 @@ def validate_input(prompt, min_val, max_val, input_type=int):
             print(Fore.LIGHTRED_EX + "[!] Invalid input. Please enter a number.")
 
 def main():
+    attemps = 0
     # Print header when tool runs
     print(f"{Fore.LIGHTRED_EX}╔{'═' * 55}╗")
     print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 48} \033[0m{Fore.LIGHTRED_EX}║")
