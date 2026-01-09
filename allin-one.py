@@ -185,7 +185,7 @@ def main():
     # Print header when tool runs
     print(f"{Fore.LIGHTRED_EX}╔{'═' * 55}╗")
     print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  v2.0{' ' * 48} \033[0m{Fore.LIGHTRED_EX}║")
-    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 30}\033[0m{Fore.LIGHTRED_EX}║")
+    print(f"{Fore.LIGHTRED_EX}║\033[48;5;1m\033[97m  Black Army Cyber grupe{' ' * 30} \033[0m{Fore.LIGHTRED_EX}║")
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
     
     print("Protocols:")
