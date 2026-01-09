@@ -202,7 +202,7 @@ def main():
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
-        port = validate_input("Enter port (1-65535): ", 1, 65535)
+        port = validate_input("Enter port (80): ", 1, 65535)
         duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
         packet_size = validate_input("Enter packet size in bytes (1-65500): ", 1, 65500)
 
@@ -220,7 +220,7 @@ def main():
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
-        port = validate_input("Enter port (1-65535): ", 1, 65535)
+        port = validate_input("Enter port (80): ", 1, 65535)
         duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
 
         print(Fore.LIGHTBLUE_EX + "Execution Style:")
