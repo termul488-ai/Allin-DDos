@@ -195,9 +195,9 @@ def main():
     print(f"{Fore.LIGHTRED_EX}╚{'═' * 55}╝")
 
     while attemps < 100:
-        print("\033[32m┏━━━━━━━⬣
-        username = input("\033[32mEnter your username: \033[0m")
-        password = input("\033[32mEnter your password: \033[0m")
+        print("\033[32m┏━━━━━━━⬣\033[0m")
+        username = input("\033[32m┗━> Enter your username: \033[0m")
+        password = input("\033[32m┗━> Enter your password: \033[0m")
 
     if username == 'ba313' and password == 'ba313':
         print("\033[48;5;3m•••⟩⟩ R U A N G  P E J U A N G ...!!\033[0m")
