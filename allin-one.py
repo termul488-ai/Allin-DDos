@@ -206,11 +206,11 @@ def main():
             print('Incorrect credentials. Check if you have Caps lock on and try again.')
             attemps += 1
             continue
-    print("
-    print("Protocols:")
-    print("1. UDP")
-    print("2. TCP")
-    print("3. HTTP")
+    
+    print("\033[32m┏━━Protocols━━⬣")
+    print("\033[32m┗━> UDP")
+    print("\033[32m┗━> TCP")
+    print("\033[32m┗━> HTTP")
     
     protocol = input(Fore.LIGHTBLUE_EX + "Select protocol (1-3): ").strip()
 
