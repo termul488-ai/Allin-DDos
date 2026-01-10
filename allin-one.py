@@ -218,7 +218,7 @@ def main():
         print("\033[48;5;3mUDP METODS:\033[0m")
         print("\033[32m┏━━━> UDP Plain press 1")
         print("\033[32m┗━━━> UDP Random press 2")
-        method = input("\033[7m Select method (1-2):\033[0m\033[32m \033[0m").strip()
+        method = input("\033[48;5;3m Select method (1-2):\033[0m\033[32m \033[0m").strip()
         print(Fore.LIGHTCYAN_EX + "┏━━━━━━━━━━━⬣")
         ip = input(Fore.LIGHTCYAN_EX + "┗━> IP Server: ")
         port = validate_input(Fore.LIGHTCYAN_EX + "┗━> Port (80): ", 1, 65535)
@@ -245,7 +245,7 @@ def main():
         print(Fore.LIGHTCYAN_EX + "Execution Style:")
         print("1. Single (One socket)")
         print("2. Multi-threaded (10 threads)")
-        style = input(Fore.LIGHTCYAN_EX + "\033[48;5;3mSelect style (1-2)\033[0m: ").strip()
+        style = input(Fore.LIGHTCYAN_EX + "Select style (1-2): ").strip()
 
         if method == "1":
             if style == "1":
