@@ -245,7 +245,7 @@ def main():
         print(Fore.LIGHTCYAN_EX + "Execution Style:")
         print("1. Single (One socket)")
         print("2. Multi-threaded (10 threads)")
-        style = input(Fore.LIGHTCYAN_EX + "Select style (1-2): ").strip()
+        style = input(Fore.LIGHTCYAN_EX + "\033[48;5;3mSelect style (1-2)\033[0m: ").strip()
 
         if method == "1":
             if style == "1":
