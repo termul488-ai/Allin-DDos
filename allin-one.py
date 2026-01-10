@@ -267,7 +267,7 @@ def main():
 
     elif protocol == "3":  # HTTP
         url = input(Fore.LIGHTCYAN_EX + "┏━> URL target: ")
-        duration = validate_input(Fore.LIGHTCYAN_EX + "┗━> Duration seconds(500): ", 1, float('inf'), float)
+        duration = validate_input(Fore.LIGHTCYAN_EX + "┗━> Duration seconds(120): ", 1, float('inf'), float)
         http_flood(url, duration)
 
     else:
