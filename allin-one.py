@@ -234,18 +234,18 @@ def main():
 
     elif protocol == "2":  # TCP
         print("\033[48;5;3mTCP METHODS:")
-        print("\033[32m┏━━━> TCP SYN Flood (press.1")
+        print("\033[32m┏━━━> TCP SYN Flood (press.1)")
         print("\033[32m┗━━━> TCP Data Flood (press.2)")
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
-        ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
+        ip = input(Fore.LIGHTCYAN_EX + "Enter server IP: ")
         port = validate_input("Enter port (80/443): ", 1, 65535)
         duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
 
-        print(Fore.LIGHTBLUE_EX + "Execution Style:")
+        print(Fore.LIGHTCYAN_EX + "Execution Style:")
         print("1. Single (One socket)")
         print("2. Multi-threaded (10 threads)")
-        style = input(Fore.LIGHTBLUE_EX + "Select style (1-2): ").strip()
+        style = input(Fore.LIGHTCYAN_EX + "Select style (1-2): ").strip()
 
         if method == "1":
             if style == "1":
@@ -266,8 +266,8 @@ def main():
             print(Fore.LIGHTRED_EX + "[!] Invalid TCP method.")
 
     elif protocol == "3":  # HTTP
-        url = input(Fore.LIGHTBLUE_EX + "Enter URL (http://example.com): ")
-        duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
+        url = input(Fore.LIGHTCYAN_EX + "URL target (http://example.com): ")
+        duration = validate_input("flood duration in seconds(500): ", 1, float('inf'), float)
         http_flood(url, duration)
 
     else:
