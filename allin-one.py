@@ -238,9 +238,9 @@ def main():
         print("\033[32m┗━━━> TCP Data Flood (press.2)")
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
-        ip = input(Fore.LIGHTCYAN_EX + "Enter server IP: ")
-        port = validate_input("Enter port (80/443): ", 1, 65535)
-        duration = validate_input("Enter flood duration in seconds: ", 1, float('inf'), float)
+        ip = input(Fore.LIGHTCYAN_EX + "Server IP: ")
+        port = validate_input("Port (80/443): ", 1, 65535)
+        duration = validate_input("Flood duration in seconds: ", 1, float('inf'), float)
 
         print(Fore.LIGHTCYAN_EX + "Execution Style:")
         print("1. Single (One socket)")
