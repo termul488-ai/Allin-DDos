@@ -242,7 +242,7 @@ def main():
         port = validate_input(Fore.LIGHTCYAN_EX + "┗━> Port (80/443): ", 1, 65535)
         duration = validate_input(Fore.LIGHTCYAN_EX + "┗━> Flood duration in seconds: ", 1, float('inf'), float)
 
-        print(Fore.LIGHTCYAN_EX + "Execution Style:")
+        print("\033[48;5;3mExecution Style:\033[0m")
         print("\033[32m┏━━━> Single (press.1)")
         print("\033[32m┗━━━> Multi-threaded (press.2)")
         style = input(Fore.LIGHTCYAN_EX + "Select style (1-2): ").strip()
