@@ -238,9 +238,9 @@ def main():
         print("\033[32m┗━━━> TCP Data Flood (press.2)")
         method = input("\033[48;5;3mSELECT METHODS (1-2):\033[0m\033[32m \033[0m").strip()
 
-        ip = input(Fore.LIGHTCYAN_EX + "Server IP: ")
-        port = validate_input(Fore.LIGHTCYAN_EX + "Port (80/443): ", 1, 65535)
-        duration = validate_input(Fore.LIGHTCYAN_EX + "Flood duration in seconds: ", 1, float('inf'), float)
+        ip = input(Fore.LIGHTCYAN_EX + "┗━>Server IP: ")
+        port = validate_input(Fore.LIGHTCYAN_EX + "┗━> Port (80/443): ", 1, 65535)
+        duration = validate_input(Fore.LIGHTCYAN_EX + "┗━> Flood duration in seconds: ", 1, float('inf'), float)
 
         print(Fore.LIGHTCYAN_EX + "Execution Style:")
         print("\033[32m┏━━━> Single (press.1)")
