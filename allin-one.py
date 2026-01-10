@@ -233,9 +233,9 @@ def main():
             print(Fore.LIGHTRED_EX + "[!] Invalid UDP method.")
 
     elif protocol == "2":  # TCP
-        print(Fore.LIGHTBLUE_EX + "\nTCP Methods:")
-        print("1. TCP SYN Flood (Sends SYN packets)")
-        print("2. TCP Data Flood (Sends data after connection)")
+        print("\033[48;5;3mTCP METHODS:")
+        print("\033[32m┏━━━> TCP SYN Flood (press.1")
+        print("\033[32m┗━━━> TCP Data Flood (press.2)")
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-2): ").strip()
 
         ip = input(Fore.LIGHTBLUE_EX + "Enter server IP: ")
