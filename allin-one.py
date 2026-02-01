@@ -4,7 +4,6 @@ import random
 import time
 import threading
 import requests
-import fade
 from colorama import init, Fore
 
 # Initialize Colorama for colored output
@@ -15,8 +14,14 @@ def clear():
     
 
 os.system("clear")
-logo = """
-
+print("""
+\033[32m
+┌──────╮
+│┌────╮
+││
+┌─────╯
+││
+└─
   ██╗ ████╗    ██╗       ██████╗  ████╗    ██╗ ███████╗
   ██║ ██ ██║   ██║      ██╔═══██║ ██ ██║   ██║ ██╔════╝
   ██║ ██║ ██║  ██║  ██╗ ██║   ██║ ██║ ██║  ██║ ██║
